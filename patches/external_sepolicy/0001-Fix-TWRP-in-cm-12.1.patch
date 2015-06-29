@@ -1,0 +1,26 @@
+From d835a66c49fd236ad281344841fdebb0bf2416ab Mon Sep 17 00:00:00 2001
+From: fefifofum <fefifofum@email.com>
+Date: Mon, 6 Apr 2015 23:20:49 +0200
+Subject: [PATCH] Fix TWRP in cm-12.1
+
+---
+ recovery.te | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/recovery.te b/recovery.te
+index 204c096..bf45574 100644
+--- a/recovery.te
++++ b/recovery.te
+@@ -7,6 +7,9 @@ type recovery, domain;
+ # But the allow rules are only included in the recovery policy.
+ # Otherwise recovery is only allowed the domain rules.
+ recovery_only(`
++  # Allow recovery to set permissive mode
++  permissive recovery;
++
+   allow recovery self:capability { chown dac_override fowner fsetid setfcap setuid setgid sys_admin sys_tty_config };
+ 
+   # Set security contexts on files that are not known to the loaded policy.
+-- 
+1.9.1
+
