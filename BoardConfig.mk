@@ -143,4 +143,3 @@ TW_CRYPTO_KEY_LOC := "footer"
 TW_INCLUDE_FUSE_EXFAT := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
-TW_NO_USB_STORAGE := true
