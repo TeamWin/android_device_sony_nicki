@@ -34,8 +34,9 @@ BOARD_KERNEL_CMDLINE := panic=3 console=ttyHSL0,115200,n8 androidboot.hardware=q
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
-TARGET_KERNEL_SOURCE := kernel/sony/msm8x27
-TARGET_KERNEL_CONFIG := cyanogenmod_nicki_defconfig
+#TARGET_KERNEL_SOURCE := kernel/sony/msm8x27
+#TARGET_KERNEL_CONFIG := cyanogenmod_nicki_defconfig
+TARGET_PREBUILT_KERNEL := device/sony/nicki/kernel
 
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
