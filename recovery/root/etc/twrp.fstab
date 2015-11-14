@@ -1,10 +1,10 @@
 # mount point fstype device [device2] fstype2
 
-/boot         emmc    /dev/block/platform/msm_sdcc.1/by-name/boot
+/boot         emmc    /dev/block/platform/msm_sdcc.1/by-name/boot       flags=display="Boot"
 /recovery     emmc    /dev/block/platform/msm_sdcc.1/by-name/FOTAKernel flags=display="Recovery";backup=1
-/system       ext4    /dev/block/platform/msm_sdcc.1/by-name/system
+/system       ext4    /dev/block/platform/msm_sdcc.1/by-name/system     flags=display="System";usermrf
 /cache        ext4    /dev/block/platform/msm_sdcc.1/by-name/cache      flags=display="Cache";backup=0;usermrf
-/data         ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata
-/external_sd  vfat    /dev/block/mmcblk1p1   /dev/block/mmcblk1         flags=display="Micro SDcard";storage;wipeingui;removable;andsec
+/data         ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata   flags=display="Data"
+/external_sd  auto    /dev/block/mmcblk1p1   /dev/block/mmcblk1         flags=display="Micro SDcard";storage;wipeingui;removable;andsec
 /usb-otg      vfat    /dev/block/sda1        /dev/block/sda             flags=display="USB OTG";storage;wipeingui;removable
 /sd-ext       auto    /dev/block/mmcblk1p2                              flags=display="SD-Ext";wipeingui;removable;backup=1
