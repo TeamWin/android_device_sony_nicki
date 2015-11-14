@@ -14,8 +14,5 @@
 # limitations under the License.
 #
 
-# Run patch(es)
-sh device/sony/nicki/patches/apply.sh
-
 add_lunch_combo cm_nicki-eng
 add_lunch_combo cm_nicki-userdebug
